@@ -5,7 +5,7 @@ class Game:
     def generate_random_word(self) -> str:
         pass
 
-    def validate_input(self) -> bool:
+    def validate_input(self, input_word: str) -> bool:
         pass
 
     def run(self):
