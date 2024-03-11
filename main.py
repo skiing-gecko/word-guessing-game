@@ -18,7 +18,11 @@ class Game:
         pass
 
     def validate_input(self, input_word: str) -> bool:
-        pass
+        if len(input_word) == self._word_length:
+            for character in input_word:
+                if 97 <= ord(character.lower()) <= 122:
+                    return True
+        return False
 
     def run(self):
         word: str = self.generate_random_word()
