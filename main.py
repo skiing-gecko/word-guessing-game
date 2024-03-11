@@ -9,6 +9,7 @@ class Game:
 
     @word_length.setter
     def word_length(self, value: str) -> None:
+    def word_length(self, value: int) -> None:
         self._word_length = value
 
     # class methods
