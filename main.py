@@ -8,8 +8,9 @@ class Game:
         return self._word_length
 
     @word_length.setter
-    def word_length(self, value: str) -> None:
     def word_length(self, value: int) -> None:
+        if not isinstance(value, int):
+            raise TypeError("Word length must be an integer")
         self._word_length = value
 
     # class methods
