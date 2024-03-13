@@ -24,7 +24,7 @@ class Game:
                     return True
         return False
 
-    def run(self):
+    def run(self) -> None:
         word: str = self.generate_random_word()
 
 
