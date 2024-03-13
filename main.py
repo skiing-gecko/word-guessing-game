@@ -20,6 +20,7 @@ class Game:
     def validate_input(self, input_word: str) -> bool:
         if len(input_word) == self._word_length:
             for character in input_word:
+                # ascii codes for lowercase alphabet, i.e., a-z
                 if 97 <= ord(character.lower()) <= 122:
                     return True
         return False
