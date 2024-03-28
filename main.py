@@ -57,6 +57,9 @@ class Game:
             return True
         return False
 
+    def update_guessed_word(self, guess: str, position: int) -> None:
+        pass
+
     def run(self) -> None:
         word: str = self.generate_random_word()
 
