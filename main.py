@@ -2,6 +2,7 @@ class Game:
     def __init__(self, word_length: int):
         self._word_length: int = word_length
         self._word: str = self.generate_random_word()
+        self._guessed_word: str = "_" * self._word_length
 
     # getters and setters
     @property
@@ -13,6 +14,16 @@ class Game:
         if not isinstance(value, int):
             raise TypeError("Word length must be an integer")
         self._word_length = value
+
+    @property
+    def guessed_word(self) -> str:
+        return self._guessed_word
+
+    @guessed_word.setter
+    def guessed_word(self, value: str) -> None:
+        if not isinstance(value, str):
+            raise TypeError("Guessed word must be a string")
+        self._guessed_word = value
 
     @property
     def word(self) -> str:
